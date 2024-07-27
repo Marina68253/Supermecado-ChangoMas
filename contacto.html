@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/contacto.css">
+        <title>Repaso persistencia</title>
+        
+    </head>
+    <body>
+        <header>
+            <nav class="nav-contenedor">
+                <div class="home">
+                    <img src="./imagenes/logoChangoMas.jpeg" alt="logo">
+                    
+                </div>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="./inicio.html">Inicio</a></li>
+                        <li><a href="./ofertas.html">Ofertas</a></li>
+                        <li><a href="./productos.html">Productos</a></li>
+                        <li><a href="./contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <h2>Formulario de contacto</h2>
+
+        <form>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" placeholder="Ingrese su Nombre:">
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" placeholder="Ingrese su Apellido">
+            <label for="telefono"> Telefono:</label>
+            <input type="text" id="telefono" placeholder="Ingrese su Telefono">
+            <label for="mail"> Mail:</label>
+            <input type="text" id="mail" placeholder="Ingrese su Mail">
+            
+
+            <button id="enviar">Enviar</button>
+        </form>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>       
+        <script src="./contacto.js"></script>
+        
+    </body>
+</html>
