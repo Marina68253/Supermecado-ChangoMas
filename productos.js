@@ -190,7 +190,7 @@ listaProducto();
 
         carrito.forEach((product) => {
             let carritoContent = document.createElement("div");
-            carritoContent.className = "modal-content";
+            carritoContent.className = "modal-product";
             carritoContent.innerHTML = `
                 <img src="${product.image}" alt="${product.nombre}">
                 <h2>${product.nombre}</h2>
