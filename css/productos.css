@@ -24,26 +24,45 @@ body {
     margin-right: 10px;
 }
 
+body {
+    background-color: #007BFF;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.nav-contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #EBEFF5;
+    padding: 15px;
+}
+.home {
+    display: flex;
+    align-items: center;
+}
+.home img {
+    width: 70vh;
+    height: 20vh;
+    margin-right: 10px;
+}
 .nav-links {
     display: flex;
     flex: 1;
-    justify-content:center;
+    justify-content: center;
 }
-
 ul {
-    display: flex; 
+    display: flex;
     gap: 20px;
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
-
-li {
+li{
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 a {
     display: flex;
     justify-content: center;
@@ -52,74 +71,72 @@ a {
     box-sizing: border-box;
     text-decoration: none;
     color: white;
-    background-color: #0d24ee;
+    background-color: #0D24EE;
     text-align: center;
-    border: 1px solid #e2eaf3;
+    border: 1px solid #E2EAF3;
 }
-
 a:hover {
-    background-color: #396ba0;
+    background-color: #396BA0;
 }
-
 .ver-carrito img {
-    width: 10vh; 
+    width: 10vh;
     height: 10vh;
     padding: 20px;
 }
-
 .listaContent {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin-top: 40px;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin: 40px 50px 0 50px;
 }
-
 .car {
-    background-color: #0d2bee;
+    background-color: #0D2BEE;
     max-width: 250px;
     margin: 15px;
     text-align: center;
-    font-family: Arial;
-    border: 3px solid #e2eaf3;
+    font-family: Arial, sans-serif;
+    border: 3px solid #E2EAF3;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
 }
-
 .car img {
     padding: 10px;
-    width: 90%;
-    height: 220px;
-    margin-trim: 15px;
+    height: auto;
+    max-height: 220px;
+    object-fit: cover;
+    margin-bottom: 15px;
 }
 
 .precioProduc {
     color: rgb(14, 12, 12);
     font-size: 22px;
+    margin: 10px 0;
 }
-
 .car button {
     border: none;
     outline: 0;
     color: rgb(11, 31, 145);
-    padding: 12px;
     background-color: rgb(235, 246, 248);
     text-align: center;
     cursor: pointer;
-    width: 100px;
+    width: 100%;
     font-size: 18px;
-    padding: 15px;
+    padding: 12px;
+    transition: background-color 0.3s, opacity 0.3s;
 }
-
 .car button:hover {
-    opacity: 0.7;
+    background-color: rgb(200, 230, 240);
+    opacity: 0.9;
 }
-
 .modal-content {
     width: 90%;
     margin: 0 5%;
     max-height: 95vh;
     color: bisque;
-    background-color: #0d0de0;
+    background-color: #0D0DE0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -128,31 +145,26 @@ a:hover {
     z-index: 9;
     top: 2.5vh;
 }
-
 .modal-content {
     display: none;
 }
-
 .modal-header {
     display: flex;
     justify-content: space-around;
-    background-color: #e2e2ee;
-    color: #0b0c0e;
+    background-color: #E2E2EE;
+    color: #0B0C0E;
     width: 100%;
     padding: 10px;
 }
-
-.modal-header-title { 
+.modal-header-title {
     justify-self: start;
 }
-
 .modal-header-btn {
     position: absolute;
     top: 10px;
     right: 10px;
     cursor: pointer;
 }
-
 .modal-product {
     display: flex;
     flex-direction: row;
@@ -162,17 +174,23 @@ a:hover {
     margin: 5px;
     padding: 5px;
 }
-
 .modal-product img {
     height: 120px;
     width: 120px;
 }
-
 .total-content {
     font-size: 25px;
-    margin-trim: 15px;
+    margin: 15px;
     padding: 20px;
     text-align: center;
     width: 100%;
+    height: 20%;
+}
+.confirmar-compra{
+    font-size: 20px;
+    margin: 15px;
+    padding: 20px;
+    text-align: center;
+    width: 20%;
     height: 20%;
 }

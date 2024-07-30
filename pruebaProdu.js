@@ -1,180 +1,277 @@
-const contenedorLista = document.getElementById("listaContent"); /* me traigo el  elemento id  padre contenedor html */
+const contenedorLista = document.getElementById("listaContent");
 const verCarrito = document.getElementById("ver-carrito");
 const modalContent = document.getElementById("modal-content");
-
 
 const producto = [
     {
         id: 1,
-        nombre: "arbejas inca 340gr",
+        nombre: "Arbejas Inca 340gr",
         precios: 600,
-        stock: "producto en stock 50",
-        image: "./imagenes/arbejas.jpeg",
+        stock: 50,
+        image: "./imagenes/arbejas.jpeg"
     },
     {
         id: 2,
-        nombre: "arroz largo fino check 1kg",
+        nombre: "Arroz Largo Fino Check 1kg",
         precios: 1689,
-        stock: "producto en stock 50",
-        image: "./imagenes/arrozCheck.jpeg",
+        stock: 50,
+        image: "./imagenes/arrozCheck.jpeg"
     },
     {
         id: 3,
-        nombre: "fideo matarazzo 500gr",
-        precios: 999,
-        stock: "producto en stock 50",
-        image: "./imagenes/fideo.jpeg",
+        nombre: "Fideo Matarazzo 500gr",
+        precios: 999, stock: 50,
+        image: "./imagenes/fideo.jpeg"
     },
     {
         id: 4,
-        nombre: "galletias oreo",
+        nombre: "Galletias Oreo",
         precios: 1400,
-        stock: "producto en stock 50",
-        image: "./imagenes/galletitasOreo.jpg",
+        stock: 50,
+        image: "./imagenes/galletitasOreo.jpg"
     },
     {
         id: 5,
-        nombre: "jugo Bc",
+        nombre: "Jugo Bc",
         precios: 290,
-        stock: "producto en stock 50",
-        image: "./imagenes/jugoBc.jpeg",
+        stock: 50,
+        image: "./imagenes/jugoBc.jpeg"
     },
     {
         id: 6,
-        nombre: "gelatina royal 125gr",
+        nombre: "Gelatina Royal 125gr",
         precios: 890,
-        stock: "producto en stock 100",
-        image: "./imagenes/gelatina.jpeg",
+        stock: 100,
+        image: "./imagenes/gelatina.jpeg"
     },
     {
         id: 7,
-        nombre: "sopa de zapallo 63gr",
+        nombre: "Sopa de Zapallo 63gr",
         precios: 999,
-        stock: "producto en stock 100",
-        image: "./imagenes/sopaZapallo.jpeg",
+        stock: 100,
+        image: "./imagenes/sopaZapallo.jpeg"
     },
     {
         id: 8,
-        nombre: "promo shampoo Acondicinador",
+        nombre: "Promo de Shampoo Acondicinador",
         precios: 4500,
-        stock: "producto en stock 50",
-        image: "./imagenes/ShampooAcondicinador.jpeg",
+        stock: 50,
+        image: "./imagenes/ShampooAcondicinador.jpeg"
     },
     {
         id: 9,
-        nombre: "suprema de pollo x kg",
+        nombre: "Suprema de Pollo x kg",
         precios: 4899,
-        stock: "producto en stock 50",
-        image: "./imagenes/supremaDePollo.jpeg",
+        stock: 50,
+        image: "./imagenes/supremaDePollo.jpeg"
     },
     {
         id: 10,
-        nombre: "tallarines matarazzo 500gr",
+        nombre: "Tallarines Matarazzo 500gr",
         precios: 999,
-        stock: "producto en stock 100",
-        image: "./imagenes/tallarines.jpeg",
+        stock: 100,
+        image: "./imagenes/tallarines.jpeg"
     },
     {
         id: 11,
-        nombre: "tapa de empanda la salteña 12 unidades",
+        nombre: "Tapa de Empanda La Salteña 12 Uds",
         precios: 999,
-        stock: "producto en stock 100",
-        image: "./imagenes/tapaEmpanada.jpeg",
+        stock: 100,
+        image: "./imagenes/tapaEmpanada.jpeg"
     },
     {
         id: 12,
-        nombre: "vino toro 1 ltrs",
+        nombre: "Vino Toro 1 ltrs",
         precios: 999,
-        stock: "producto en stock 100",
-        image: "./imagenes/vinoToro.jpg",
+        stock: 100,
+        image: "./imagenes/vinoToro.jpg"
     },
     {
         id: 13,
-        nombre: "yerba playadito 1kg",
+        nombre: "Yerba Playadito 1Kg",
         precios: 999,
-        stock: "producto en stock 50",
-        image: "./imagenes/yerbaPlayadito.jpeg",
+        stock: 50,
+        image: "./imagenes/yerbaPlayadito.jpeg"
     },
     {
         id: 14,
-        nombre: "yogur serenisima 1ltrs",
+        nombre: "Yogur Serenisima 1Ltrs",
         precios: 999,
-        stock: "producto en stock 50",
-        image: "./imagenes/yogur.jpeg",
+        stock: 50,
+        image: "./imagenes/yogur.jpeg"
     },
+    {
+        id: 15,
+        nombre: "Jabon Dove",
+        precios: 1200,
+        stock: 50,
+        image: "./imagenes/jabonDove.jpeg"
+    },
+    {
+        id: 16,
+        nombre: "Leche Ilolay 1Ltrs",
+        precios: 1200,
+        stock: 50,
+        image: "./imagenes/lecheIlolay.webp"
+    }
 ];
 
 let carrito = [];
 
-producto.forEach((product) => {
-    let content = document.createElement("div"); /* se crea el elemento div que se lo asigna al content */
-    content.className = "car"; /* se crea class car que me sirbe para darle estilo */
-    content.innerHTML = // se lo agrega al div
-    `<img src="${product.image}"> 
-    <h2>${product.nombre}</h2>
-    <h3>${product.stock}</h3>
-    <p class="precioProduc">${product.precios}$</p>`; /* se crea la class compra */
-
-    contenedorLista.appendChild(content);//agrega al contendr lista 
-
-    let comprar = document.createElement("button"); /* se cre el elemento btn */
-    comprar.innerText = "comprar"; /* agrega txto btn */
-    comprar.className = "comprar";
-
-    content.appendChild(comprar); /*agrega boton cada producto*/
-
-    comprar.addEventListener("click", () => { //le paso a btn comprar el escuchador de evento click
-        carrito.push({ // con el metodo push le pasamos todo lo queremos ver en el carrito
-            id: product.id,
-            image: product.image,
-            nombre: product.nombre,
-            precios: product.precios,
-            stock: product.stock
-        });
-        console.log(carrito);
-    });
-});
-
-verCarrito.addEventListener("click", () => { //le paso a btn comprar el escuchador de evento click
-    modalContent.innerHTML = "";
-    modalContent.style.display = "flex";
-
-    const modalHeader = document.createElement("div");
-    modalHeader.className = "modal-header"; //creo una classe modal header para darle estilo
-    modalHeader.innerHTML =
-        `<h1 class="modal-header-title">Carrito</h1> 
-    `;
-    modalContent.appendChild(modalHeader); //agrega al content modal 
-
-    const modalBtn = document.createElement("h1");
-    modalBtn.innerText = "X";
-    modalBtn.className = "modal-header-btn";
-
-    //para que se cierre el carrito
-    modalBtn.addEventListener("click", () => {
-        modalContent.style.display = "none";
-    });
-
-    modalHeader.appendChild(modalBtn);
-
-    carrito.forEach((product) => { //recorro el carrito
-        let carritoContent = document.createElement("div");
-        carritoContent.className = "modal-content";
-        carritoContent.innerHTML = `
-        <img src="${product.image}">
-        <h2>${product.nombre}</h2>
-        <h3>${product.stock}</h3>
-        <p>${product.precios}$</p>
+function listaProducto() {
+    producto.forEach((product) => {
+        let content = document.createElement("div");
+        content.className = "car";
+        content.innerHTML = `     
+            <img src="${product.image}" alt="${product.nombre}">
+            <h2>${product.nombre}</h2>
+            <h3>producto en stock: ${product.stock}</h3>
+            <p class="precioProduc">${product.precios}$</p> 
         `;
-        modalContent.appendChild(carritoContent);
+
+        let comprar = document.createElement("button");
+        comprar.innerText = "Comprar";
+        comprar.className = "comprar";
+        content.appendChild(comprar);
+
+        contenedorLista.appendChild(content);
+
+        comprar.addEventListener("click", () => {
+
+            // Verifica si el producto ya está en el carrito
+            const productInCart = carrito.find((item) => item.id === product.id);//recorre el array y devuelve el primer objeto que cumple con esta condición.
+
+            // Si el producto ya está en el carrito y la cantidad es menor que el stock, aumenta la cantidad
+            if (productInCart) {
+                if (productInCart.cantidad < product.stock) {
+                    productInCart.cantidad += 1;
+                }
+            }
+            // Si el producto no está en el carrito, lo agrégacon cantidad 1
+            else {
+                carrito.push({
+                    id: product.id,
+                    image: product.image,
+                    nombre: product.nombre,
+                    precios: product.precios,
+                    stock: product.stock,
+                    cantidad: 1
+                });
+            }
+        });
     });
+}
 
-    const total = carrito.reduce((acc, el) => acc + el.precios, 0);
+listaProducto();
 
+function mostrarCarrito() {
+
+    verCarrito.addEventListener("click", () => {
+        modalContent.innerHTML = "";
+        modalContent.style.display = "flex";
+
+        const modalHeader = document.createElement("div");
+        modalHeader.className = "modal-header";
+        modalHeader.innerHTML = `<h1 class="modal-header-title">Carrito</h1>`;
+        modalContent.appendChild(modalHeader);
+
+        const modalBtn = document.createElement("h1");
+        modalBtn.innerText = "X";
+        modalBtn.className = "modal-header-btn";
+        modalBtn.addEventListener("click", () => {
+            modalContent.style.display = "none";
+        });
+        modalHeader.appendChild(modalBtn);
+
+
+        carrito.forEach((product) => {
+            let carritoContent = document.createElement("div");
+            carritoContent.className = "modal-product";
+            carritoContent.innerHTML = `
+                <img src="${product.image}" alt="${product.nombre}">
+                <h2>${product.nombre}</h2>
+                <h3>producto en stock: ${product.stock}</h3>
+                <p>${product.precios}$</p>
+            `;
+            // se crea impu typo number con un valor min 1 y max depediendo el stock product 
+            let cantInput = document.createElement("input");
+            cantInput.type = "number";
+            cantInput.value = product.cantidad;
+            cantInput.min = 1;
+            cantInput.max = product.stock;
+
+
+            let btnMas = document.createElement("button");
+            btnMas.innerText = "+";
+            btnMas.addEventListener("click", () => {
+                if (parseInt(cantInput.value) < product.stock) {
+                    cantInput.value = parseInt(cantInput.value) + 1;
+                    product.cantidad = parseInt(cantInput.value);
+                    precioTotal();
+
+                }
+            });
+            //creo el boton -
+            let btnMenos = document.createElement("button");
+            btnMenos.innerText = "-";
+            btnMenos.addEventListener("click", () => {
+                if (parseInt(cantInput.value) > 1) {
+                    cantInput.value = parseInt(cantInput.value) - 1;
+                    product.cantidad = parseInt(cantInput.value);
+                    precioTotal();
+
+                }
+            });
+
+            carritoContent.appendChild(btnMenos);
+            carritoContent.appendChild(cantInput);
+            carritoContent.appendChild(btnMas);
+
+            modalContent.appendChild(carritoContent);
+        });
+
+        const confirmarCompraBtn = document.createElement("button");
+        confirmarCompraBtn.className = "confirmar-compra";
+        confirmarCompraBtn.innerText = "Confirmar compra";
+
+
+        confirmarCompraBtn.addEventListener("click", () => {//recorro  producto usado el metodo reduce a lo cual acc es el acumulador y el producto   
+            const totalFinal = document.createElement("div");
+            if (carrito.length === 0 || carrito.reduce((acc, el) => acc + el.precios * el.cantidad, 0) === 0) {
+
+                alert("El carrito esta vacio debe realizar una compra.");
+            } else {
+                confirmarCompra();
+            }
+        });
+        modalContent.appendChild(confirmarCompraBtn);
+
+        precioTotal();
+    });
+}
+
+function precioTotal() {
+    const total = carrito.reduce((acc, el) => acc + el.precios * el.cantidad, 0);
+
+    // Elimina el exiteTotal 
+    const primerTotal = modalContent.querySelector(".total-content");
+    if (primerTotal) {
+        primerTotal.remove();
+    }
+
+    // me lo agrega el nuevo elemento div con el totalFinal
     const totalFinal = document.createElement("div");
     totalFinal.className = "total-content";
     totalFinal.innerHTML = `Total a pagar: ${total}$`;
-    
     modalContent.appendChild(totalFinal);
-});
+}
+mostrarCarrito();
+
+function confirmarCompra() {
+    carrito = [];
+    alert("Compra confirmada. ¡Gracias por tu compra!");
+    modalContent.style.display = "none";
+    contenedorLista.innerHTML = "";
+    listaProducto(); //me vuelve a mostrar la lista de producto
+}
 

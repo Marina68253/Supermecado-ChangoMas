@@ -52,3 +52,27 @@ a {
 a:hover {
     background-color: #396ba0; /* Cambia el color de fondo al pasar el ratón */
 }
+
+
+
+
+
+
+
+
+
+footer {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .footer-logo {
+    width: 100px;
+  }
+  
+  .footer-links a {
+    color: #666;
+    text-decoration: none;
+    margin: 10px;
+  }
