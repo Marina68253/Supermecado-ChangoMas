@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/contacto.css">
+    <title>Formulario</title>
+</head>
+<body>
+    <header>
+        <nav class="nav-contenedor">
+            <div class="home">
+                <img src="./imagenes/logoChangoMas.jpeg" alt="logo">
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="./inicio.html">Inicio</a></li>
+                    <li><a href="./ofertas.html">Ofertas</a></li>
+                    <li><a href="./productos.html">Productos</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="formulario-container">
+        <form class="formulario">
+            <h2>Formulario de contacto</h2>
+            <div class="form-group">
+                <label for="nombre">Ingrese su Nombre:</label>
+                <input type="text" name="nombre" id="nombre" placeholder="Ingrese su Nombre:">
+            </div>
+            <div class="form-group">
+                <label for="apellido">Ingrese su Apellido:</label>
+                <input type="text" name="apellido" id="apellido" placeholder="Ingrese su Apellido">
+            </div>
+            <div class="form-group">
+                <label for="telefono">Ingrese su Telefono:</label>
+                <input type="number" name="telefono" id="telefono" placeholder="Ingrese su Telefono">
+            </div>
+            <div class="form-group">
+                <label for="mail">Ingrese su Mail:</label>
+                <input type="email" name="mail" id="mail" placeholder="Ingrese su Mail">
+            </div>
+            <div class="form-group">
+                <label for="description">Ingrese su Comentario:</label>
+                <textarea id="description" name="description"  rows="5" cols="30"></textarea>
+            </div>
+            <div class="form-buttons">
+                <button onclick="limpiarLabels()">  Clear</button>
+                <button type="submit" id="enviar">Enviar</button>
+              
+            </div>
+        </form>
+    </div>
+    <footer>
+        <img src="./imagenes/logoFotter.png" alt="Logo" class="footer-logo">
+        <p>© 2024 Tu Hiper ChangoMás</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="./contacto.js"></script>
+</body>
+</html>

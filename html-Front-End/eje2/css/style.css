@@ -1,0 +1,39 @@
+body{
+  background-color: rgb(151, 144, 209);
+}
+.container{ 
+    font-family: Arial, Helvetica, sans-serif;
+text-align: center;
+}
+.p{
+    font-family:cursive;
+    color: rgb(54, 54, 52);
+  
+}
+  
+ul li a {
+    border: 2px solid black;
+    color:rgb(3, 17, 54);
+    font-size: 20px; 
+}
+.hover:hover{
+  
+    color: rgb(9, 36, 112);
+    font-size: 20px; 
+    cursor:pointer;
+}
+.resaltado{
+    color:rgb(9, 36, 112); /* Cambia este valor al color deseado */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px; 
+
+}
+.segundo{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+.enlaces:active{
+    color: azure;
+    background-color: black;
+
+}

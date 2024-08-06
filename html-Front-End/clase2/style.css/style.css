@@ -1,0 +1,9 @@
+h3{/*selector de todo tipo es para cuando lo queres fija y background-color
+    se utilica para cambiar el color de fondo sino este caso para la etiqueta donde esta ubicado el parrafo*/
+       color:rgb(5, 5, 146);
+       font-size: 20px;
+       background-color: rgb(98, 97, 180);
+}
+/*body{/* fondo de pantalla*/
+   /* background-image:url("../imagen/niñoDesaparecido.jpeg");*/
+    

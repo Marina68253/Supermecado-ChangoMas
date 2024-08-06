@@ -1,0 +1,23 @@
+p{/*selector de todo tipo es para cuando lo queres fija y background-color
+ se utilica para cambiar el color de fondo sino este caso para la etiqueta donde esta ubicado el parrafo*/
+    color:rgb(8, 8, 49);
+    font-size: 20px;
+    background-color: rgb(159, 185, 9);
+}
+/*selector de clases es para un parrafo eleccion que tenga esto atributos*/
+.colorVerde{
+    color: rgb(4, 54, 4);
+}
+#especial{
+    color: rgb(25, 9, 66);
+    font-size: 25px;
+}
+body{/* fondo de pantalla*/
+  background-image:url("../imagenes/avatar.jpg");
+  /*para que no se repita imagen*/
+  background-repeat: no-repeat;
+  /*se estira toda la imagen y cubre el fondo*/
+  background-size: cover;
+  /*se fija la  imagen*/
+  background-attachment:fixed;
+}

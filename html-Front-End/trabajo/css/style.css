@@ -1,0 +1,66 @@
+.bloque1{
+    width: 30%;
+    height: 100%;
+     background-color: green;  
+     margin-right: 10px;
+}
+.bloque2{
+  
+    width: 100%;
+    margin-left: 5px;/*espacio o margen*/
+    background-color: gray;  
+  }
+  .bloque3{
+   /* border-style: dashed; difentes borde*/
+    border:5px solid black;
+    height: 50px; /*altura*/
+    background-color:blanchedalmond;  
+    margin-bottom:  10px;
+  }
+  
+  .bloque4{
+    background-color:rgb(156, 53, 134);  
+    flex-basis: 30%;
+    height: 400px;
+    margin-right: 15px;
+  }
+  .bloque5{
+    width: 70%;
+   height: 100%;
+    background-color:rgb(17, 148, 224);  
+    margin-right: 15px;
+  }
+  .bloque6{ 
+    width: 70%;
+    height: 100%;
+    background-color:rgb(230, 148, 209);
+    
+  }
+  .bloque7{ 
+    flex-basis: 100%;
+    height: 290%;
+    background-color:rgb(204, 176, 84);  
+    margin-top: 10px;
+  }
+  .bloque8{
+    background-color: mediumturquoise; 
+    border: 5px black;
+     border-style: dashed;
+      height: 50px;
+     margin-top: 10px;
+  }
+  
+  .contenedor{ 
+    height: 100px;
+    display:flex;
+    margin-bottom: 10px; /*espacio hacia bajo*/
+  }
+.contenedor-dos{
+    display: flex;
+  
+    height: 100%;
+}
+.contenedor-tres{
+  flex-basis: 100%;
+
+}

@@ -1,0 +1,130 @@
+body {
+  background-color: #007BFF;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.nav-contenedor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #ebeff5;
+  padding: 15px;
+}
+
+.home {
+  display: flex;
+  align-items: center;
+}
+
+.home img {
+  width: 70vh;
+  height: 20vh;
+  margin-right: 10px;
+}
+
+.nav-links {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+ul {
+  display: flex;
+  gap: 20px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: white;
+  background-color: #0d24ee;
+  text-align: center;
+  border: 1px solid #e2eaf3;
+}
+
+a:hover {
+  background-color: #396ba0;
+}
+
+.titulo {
+  border-radius: 60px; /* Ajusta el valor para más o menos redondez */
+  width: 100%;
+  background-color: rgb(241, 245, 14);
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  gap: 15px;
+}
+.titulo h2{
+  font-weight: bold;/* mas negrita la letras*/
+  font-weight: 10px; /*grosor de letras*/
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  color: black; /* Cambiar el color del texto a negro */
+
+}
+.ofertasDos {
+  border-radius: 60px; /* Ajusta el valor para más o menos redondez */
+  width: 100%;
+  background-color: rgb(241, 245, 14);
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.card {
+  width: 30%;
+  background-color: rgb(241, 231, 221);
+  border-radius: 25px;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.ofertas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.imgOfertas {
+  width: 80%;
+  height: auto;
+}
+
+  .footer {
+    color: #0b0e11;
+    background-color: #ecedf7;
+    padding: 0px;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.footer-logo {
+    width: 100px;
+    height: auto;
+}
+
+
+
+
